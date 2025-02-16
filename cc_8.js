@@ -72,4 +72,14 @@
  let cart = createCartTracker();
  console.log(cart(20));
  console.log(cart(35));// using test data
- 
+
+ //Task 8: Recursion in JavaScript
+ function calculateSavings(years, amount) {
+    if (years >= 10) { //when years get to 10 the recursion stops
+        return `Projected Savings: $${amount.toFixed(2)}`;
+    }
+    return calculateSavings(years +1, amount * 1.05);//using this formula to calcute savings
+ };
+
+ console.log(calculateSavings(8, 1000));
+ console.log(calculateSavings(5, 5000));//using test data
