@@ -17,3 +17,15 @@
 
  calculateDiscount(100, 0.2);
  calculateDiscount(250, 0.15);//Using given test data
+
+ //Task 3: Arrow Function
+
+ const calculateServiceFee = (amount, serviceType) => {
+    let feeRate = serviceType === "Premium" ? 0.15: serviceType === "Standard" ? 0.10: // Using ternary operator to simplify 
+     serviceType === "Basic" ? 0.05 : 0.05;// service type will checked be for each service type that is true the fee will apply to its respected type
+    let serviceFee = amount * feeRate;// formula to apply the fee
+    console.log(`Service Fee: $${serviceFee.toFixed(2)}`);
+ };
+
+ calculateServiceFee(200, "Premium");
+ calculateServiceFee(500, "Standard");//Using given test data
