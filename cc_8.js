@@ -40,3 +40,14 @@
 
  calculateRentalCost(3, "Economy", true);
  calculateRentalCost(5, "Luxury", false);// Using test data
+
+ //Task 5: Returning Values
+ function calculateLoanPayment(principal, rate, time) {
+    let totalPayment = principal + (principal * rate * time);//Using given formula to calculate loan payment
+    return `Total Payment: $${totalPayment.toFixed(2)}`;// returning function
+ };
+
+ console.log(calculateLoanPayment(1000, 0.05, 2));
+ console.log(calculateLoanPayment(5000, 0.07, 3));// Log it to the console
+
+ 
