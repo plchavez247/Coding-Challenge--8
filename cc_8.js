@@ -59,3 +59,17 @@
  };
 
  console.log(filterLargeTransactions(transactions, amount => amount > 1000));// Used to get amounts greater than 1000
+
+ //Task 7: Closures
+
+ function createCartTracker(){
+    let total = 0; // beginning total of the cart
+    return function(price){ // returning another function 
+        total += price;// price is added to the total
+        return `Total Cart Value: $${total}`// return the total
+    };
+ };
+ let cart = createCartTracker();
+ console.log(cart(20));
+ console.log(cart(35));// using test data
+ 
