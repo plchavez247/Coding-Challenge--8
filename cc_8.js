@@ -50,4 +50,12 @@
  console.log(calculateLoanPayment(1000, 0.05, 2));
  console.log(calculateLoanPayment(5000, 0.07, 3));// Log it to the console
 
- 
+ //Task 6: Higher-Order Functions
+
+ let transactions = [200, 1500, 3200 , 800, 2500];
+ function filterLargeTransactions(transactions, filterFunction) {
+    return transactions.filter(filterFunction);//Using filter to filter through transactions array
+
+ };
+
+ console.log(filterLargeTransactions(transactions, amount => amount > 1000));// Used to get amounts greater than 1000
