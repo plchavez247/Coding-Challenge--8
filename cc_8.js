@@ -29,3 +29,14 @@
 
  calculateServiceFee(200, "Premium");
  calculateServiceFee(500, "Standard");//Using given test data
+
+ //Task 4: Parameters and Arguments
+ let calculateRentalCost = (days, carType, insurance = false) =>{
+    let cost = carType ==="Economy" ? (40 * days): carType === "Standard" ? (60 * days):
+    carType === "Luxury" ? (100 * days): 0; // calculating cost per day based on car type
+    cost += insurance ? 20 * days: 0;// adding insurance cost per day 
+    console.log(`Total Rental Cost: $${cost}`);
+ };
+
+ calculateRentalCost(3, "Economy", true);
+ calculateRentalCost(5, "Luxury", false);// Using test data
